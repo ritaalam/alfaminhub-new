@@ -15,3 +15,4 @@
 - [Compound asset parsing](compound-asset-parsing.md) — Compound labels can create unintended semantic requirements; verify native rendering without relying solely on natural-language generation.
 - [Print-safe translucent artwork](print-safe-translucent-artwork.md) — Suggest translucency with solid palette roles and linework, never effects that vanish in classroom printing.
 - [Count Circle native contract](count-circle-native-contract.md) — Count & Circle stays family-agnostic; native families join through WorksheetArt, not activity-specific branches.
+- [GitHub API project push](github-api-project-push.md) — Connector-based publishing needs Git Data API snapshot commits and an initialized remote.
