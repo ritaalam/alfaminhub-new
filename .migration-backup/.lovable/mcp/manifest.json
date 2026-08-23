@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "sdk_version": "0.26.1",
+  "path": "/mcp",
+  "auth": {
+    "type": "oauth",
+    "issuer": "https://mrsrjywklvkkifjtukju.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
+  },
+  "mcp": {
+    "server": {
+      "name": "alfa-mind-hub",
+      "version": "0.1.0",
+      "title": "Alfa Mind Hub"
+    },
+    "tools": [
+      {
+        "name": "list_worksheet_options",
+        "title": "List worksheet options",
+        "description": "List every field the worksheet creator accepts (level, duration, pages, approach, skill, theme, palette, paper, printing…) with its allowed values and the defaults.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_visual_directions",
+        "title": "List visual directions",
+        "description": "List Alfa Mind Hub's original art-direction presets (visual DNA, palette, print suitability) and the available print modes.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "generate_worksheet",
+        "title": "Generate worksheet",
+        "description": "Generate a structured, print-ready Alfa Mind Hub worksheet project (pages, activities, answer key, art direction) from a creator spec. Any field left out falls back to the app default. Use list_worksheet_options for allowed values.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "level": {
+              "description": "e.g. \"Ages 4–5\", \"Kindergarten\", \"Grade 1\"",
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            "duration": {
+              "description": "e.g. \"10 minutes\"",
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            "pages": {
+              "description": "1–20 pages",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20
+            },
+            "approach": {
+              "description": "e.g. \"Montessori\", \"Waldorf\"",
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            "skill": {
+              "description": "e.g. \"Counting\"",
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            "activityType": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            "difficulty": {
+              "description": "\"Very Easy\" | \"Easy\" | \"Standard\" | \"Challenge\"",
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            "theme": {
+              "description": "e.g. \"Insects\"",
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            "palette": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            "inspiration": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            "language": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            "paper": {
+              "description": "\"A4\" | \"Letter\" | \"A5\"",
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            "printing": {
+              "description": "e.g. \"Color\", \"Ink-saver\", \"Black & White\"",
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            "version": {
+              "description": "Bump for a different deterministic variation of the same spec.",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 50
+            }
+          }
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}

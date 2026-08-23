@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Alfa Mind Hub"
+description = "A calm worksheet creator for teachers to build beautiful, age-appropriate printable learning activities in minutes, with workspace organization and classroom tools."
+version = "1.0.0"
+id = "artifacts/alfa-mind-hub"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21919
+
+[services.development]
+run = "pnpm --filter @workspace/alfa-mind-hub run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/alfa-mind-hub", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/alfa-mind-hub/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21919"
+BASE_PATH = "/"

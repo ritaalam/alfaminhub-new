@@ -1,0 +1,43 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "src/router.tsx",
+    "src/routeTree.gen.ts",
+    "src/server.ts",
+    "src/start.ts",
+    "src/routes/__root.tsx",
+    "src/routes/mcp.ts",
+    "src/routes/[.mcp]/**/*",
+    "src/routes/[.well-known]/**/*",
+    "src/routes/[.]lovable.oauth.consent.tsx",
+    "src/routes/lovable/**/*",
+    "src/lib/mcp/**/*",
+    "src/lib/email-templates/**/*",
+    "src/integrations/supabase/**/*",
+    "src/components/ui/resizable.tsx"
+  ],
+  "compilerOptions": {
+    "noEmit": true,
+    "jsx": "preserve",
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "moduleResolution": "bundler",
+    "types": ["node", "vite/client"],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@tanstack/react-router": ["./src/lib/tanstack-router-compat.tsx"]
+    }
+  },
+  "references": [
+    {
+      "path": "../../lib/api-client-react"
+    }
+  ]
+}

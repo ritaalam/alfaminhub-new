@@ -1,0 +1,17 @@
+- [Structured activity contracts](structured-activity-contracts.md) — Idea Lab cross-domain games must preserve their selected interaction through planning and validation.
+- [Quick prompt activity contracts](quick-prompt-activity-contracts.md) — Named Quick Create activities use one current-prompt type through preview, planning, and Studio.
+- [Quick Create topic inference](quick-create-topic-inference.md) — Multiple explicit assets should infer their shared topic before a stale default can leak into generation.
+- [Studio differentiation](studio-differentiation.md) — Difficulty controls must change printable workload and supports without replacing the chosen activity.
+- [Managed AI planning fallback](managed-ai-planning-fallback.md) — Managed OpenAI planning is best-effort; local generation must always remain independent.
+- [AI planning prompt budget](ai-planning-prompt-budget.md) — Detailed teacher briefs require a generous validated API prompt limit or Quick Create silently presents local fallback.
+- [Prompt-first worksheet contracts](prompt-first-worksheet-contracts.md) — Explicit teacher wording is frozen through planning, Studio, persistence, and export.
+- [Renderer-safe worksheet planning](renderer-safe-worksheet-planning.md) — Planner choices and page contracts must normalize unavailable mechanics before printing.
+- [Studio visual contracts](studio-visual-contracts.md) — Explicit pages refresh their illustration style without mutating counted content.
+- [Printable composition budget](printable-composition-budget.md) — Decorative print chrome needs explicit vertical budget so page polish never crowds learning work.
+- [Paper-aware activity density](paper-aware-activity-density.md) — Open-ended page density must preserve local artwork minimum print size on every paper format.
+- [Licensed illustration providers](licensed-illustration-provider-policy.md) — External art is optional, review-gated metadata; local printable art remains authoritative.
+- [Visual asset allocation policy](visual-asset-allocation-policy.md) — Explicit teacher-named objects remain locked; only open theme pools are age-filtered and varied.
+- [Canonical artwork recipes](canonical-artwork-recipes.md) — Printable assets use versioned local recipes; migrate a family only when it has a dedicated native composition.
+- [Compound asset parsing](compound-asset-parsing.md) — Compound labels can create unintended semantic requirements; verify native rendering without relying solely on natural-language generation.
+- [Print-safe translucent artwork](print-safe-translucent-artwork.md) — Suggest translucency with solid palette roles and linework, never effects that vanish in classroom printing.
+- [Count Circle native contract](count-circle-native-contract.md) — Count & Circle stays family-agnostic; native families join through WorksheetArt, not activity-specific branches.
